@@ -33,7 +33,7 @@ public class FlowDriver {
         job.setOutputValueClass(FlowBean.class);
 
         job.setPartitionerClass(ProvincePartitioner2.class);
-        //
+        job.setNumReduceTasks(5);
 
         //6.设置数据的输入路径和输出路径  本地路径
         FileInputFormat.setInputPaths(job, new Path("D:\\study_test\\hadoop\\writable"));
