@@ -42,7 +42,7 @@ public class FlowMapper extends Mapper<LongWritable, Text, Text, FlowBean> {
         outV.setDownFlow(Long.valueOf(downFlow));
         outV.setSumFlow();
 
-        //5.写出
+        //5.写出(这里进入环形缓冲区)
         context.write(outK, outV);
     }
 }
